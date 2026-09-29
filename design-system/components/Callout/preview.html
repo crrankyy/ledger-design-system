@@ -1,0 +1,16 @@
+<!-- @dsCard group="Content" height=430 width=820 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Callouts</title>
+<style>body{margin:0;background:var(--paper)} .ds-wrap{padding:16px 24px}</style></head>
+<body>
+<div class="lg-root ds-wrap">
+<div class="lg-callouts">
+  <div class="lg-callout lg-callout--critical"><span class="lg-glyph lg-glyph--critical" aria-hidden="true"></span><h3>2 deploys rolled back</h3><p>Both failed the health check on the payments service. The new connection pool limit was too low; raise it from 20 to 40 and redeploy.</p></div>
+  <div class="lg-callout lg-callout--warn"><span class="lg-glyph lg-glyph--warn" aria-hidden="true"></span><h3>Build cache hit rate fell to 61%</h3><p>The base image changed on Tuesday. Pin the image digest so the cache survives upstream updates.</p></div>
+  <div class="lg-callout lg-callout--good"><span class="lg-glyph lg-glyph--good" aria-hidden="true"></span><h3>Flaky test count is down to 4</h3><p>Quarantine cleared 11 tests this week. The remaining four are tracked in the reliability board.</p></div>
+  <div class="lg-callout lg-callout--note"><span class="lg-glyph lg-glyph--note" aria-hidden="true"></span><h3>Numbers now exclude staging</h3><p>From this week, every figure counts production deploys only, so totals are lower than in earlier reports.</p></div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ledger</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--paper); color:var(--ink); overflow:hidden; }
+  .cover { position:relative; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:288px; }
+  .accent { fill:var(--accent); }
+  .copper { fill:var(--chart-2); }
+  .ink { fill:var(--ink); }
+  .relief { fill:var(--line-strong); }
+  .blk { rx:var(--radius-card); }
+  .sat { rx:var(--radius-chip); }
+  .rule { stroke:var(--paper); stroke-width:1; }
+  .words { position:absolute; left:32px; bottom:32px; max-width:440px; }
+  .name { margin:0; font-family:var(--font-serif); font-size:120px; line-height:.95; font-weight:600; letter-spacing:-0.01em; color:var(--ink); }
+  .tag { margin:12px 0 0 4px; font-family:var(--font-sans); font-size:14px; line-height:20px; color:var(--ink-3); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      accent 168x232 bled off the top (the one brand hue, largest) · chart-2 copper 120x160 · ink 152x200 bled off the right edge · line-strong relief 120x24 once · about 35% of 960x288
+  arrangement one tall accent slab with a copper and an ink block beside it, bottoms on one line 64px above the edge, 16px (space-4) gutters, the relief satellite above copper
+  pattern     four ledger rules cut from the blocks in paper at the space-6 pitch, chosen because the README says serif reading, borders not shadows, a record kept on paper
+  scales      gutters space-4 16px; rule pitch space-6 24px; corners radius-card on blocks, radius-chip on the satellite; rules 1px like the line tokens
+-->
+<rect class="accent blk" x="24" y="-8" width="168" height="232" rx="8"/>
+<rect class="relief sat" x="208" y="24" width="120" height="24" rx="4"/>
+<rect class="copper blk" x="208" y="64" width="120" height="160" rx="8"/>
+<rect class="ink blk" x="344" y="24" width="152" height="200" rx="8"/>
+<line class="rule" x1="24" x2="480" y1="120" y2="120"/>
+<line class="rule" x1="24" x2="480" y1="144" y2="144"/>
+<line class="rule" x1="24" x2="480" y1="168" y2="168"/>
+<line class="rule" x1="24" x2="480" y1="192" y2="192"/>
+</svg>
+</div>
+<div class="words">
+<h1 class="name">Ledger</h1>
+<p class="tag">Reports kept on warm paper: serif to read, mono for the record.</p>
+</div>
+</div>
+</body>
+</html>

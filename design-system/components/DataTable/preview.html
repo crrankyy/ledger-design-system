@@ -1,0 +1,20 @@
+<!-- @dsCard group="Content" height=300 width=820 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Data table</title>
+<style>body{margin:0;background:var(--paper)} .ds-wrap{padding:16px 24px}</style></head>
+<body>
+<div class="lg-root ds-wrap">
+<div class="lg-table-wrap">
+  <table class="lg-table">
+    <thead><tr><th>Deploy</th><th>Service</th><th>Version</th><th class="lg-num">Duration</th><th>Outcome</th></tr></thead>
+    <tbody>
+      <tr><td class="lg-mono">d-4431</td><td>payments <span class="lg-muted">eu-west</span></td><td class="lg-mono">v3.18.2</td><td class="lg-num">6 m</td><td><span class="lg-status lg-status--critical"><span class="lg-glyph lg-glyph--critical" aria-hidden="true"></span>Rolled back <small>health check</small></span></td></tr>
+      <tr><td class="lg-mono">d-4437</td><td>web <span class="lg-muted">global</span></td><td class="lg-mono">v12.4.0</td><td class="lg-num">11 m</td><td><span class="lg-status lg-status--warn"><span class="lg-glyph lg-glyph--warn" aria-hidden="true"></span>Slow <small>cache miss</small></span></td></tr>
+      <tr><td class="lg-mono">d-4452</td><td>worker <span class="lg-muted">us-east</span></td><td class="lg-mono">v2.9.1</td><td class="lg-num">4 m</td><td><span class="lg-status lg-status--good"><span class="lg-glyph lg-glyph--good" aria-hidden="true"></span>Healthy</span></td></tr>
+    </tbody>
+  </table>
+</div>
+</div>
+</body>
+</html>

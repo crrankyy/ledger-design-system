@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap');
+
+/* Ledger report components. Colours, fonts, radii and spacing come from tokens.css.
+ * Every class is prefixed lg- so it never collides with the generated type-style classes. */
+
+.lg-root { background: var(--paper); color: var(--ink); font-family: var(--font-sans); font-size: 13px; line-height: 1.5; }
+.lg-root *, .lg-root *::before, .lg-root *::after { box-sizing: border-box; }
+.lg-root a { color: var(--accent); text-underline-offset: 2px; }
+.lg-root a:hover { color: var(--accent-hover); }
+.lg-root :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.lg-mono { font-family: var(--font-mono); }
+
+/* Header strip */
+.lg-header { background: var(--surface); border-bottom: 1px solid var(--line); padding: 14px var(--space-6); display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: space-between; }
+.lg-brand { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.lg-wordmark { font-family: var(--font-serif); font-size: 21px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2; }
+.lg-header-sub { font-family: var(--font-mono); font-size: 12px; color: var(--ink-3); padding-left: 14px; border-left: 1px solid var(--line); }
+.lg-header-meta { font-family: var(--font-mono); font-size: 12px; color: var(--ink-3); }
+
+/* Notice band */
+.lg-notice { margin: 0; background: var(--band); border-bottom: 1px solid var(--line-strong); padding: 10px var(--space-6); color: var(--ink-2); }
+.lg-notice strong { color: var(--ink); font-weight: 600; }
+
+/* Page grid: rail + main column */
+.lg-page { max-width: var(--page-max); margin: 0 auto; padding: var(--space-8) var(--space-6) 64px; display: grid; grid-template-columns: var(--rail-w) minmax(0, var(--content-max)); gap: var(--space-12); }
+.lg-rail { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 24px); align-self: start; display: grid; gap: 28px; }
+.lg-overline { font-size: 11px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 8px; }
+.lg-rail dl { margin: 0; display: grid; gap: 10px; }
+.lg-rail dt { color: var(--ink-3); font-size: 12.5px; }
+.lg-rail dd { margin: 2px 0 0; font-family: var(--font-mono); font-size: 12px; color: var(--ink-2); }
+.lg-rail ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 13px; }
+.lg-main { min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-12); }
+.lg-main > * { min-width: 0; }
+
+/* Headline block and sections */
+.lg-eyebrow { font-family: var(--font-mono); font-size: 11.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 10px; }
+.lg-h1 { font-family: var(--font-serif); font-weight: 600; font-size: clamp(28px, 4.2vw, 38px); line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 14px; text-wrap: balance; }
+.lg-dek { font-family: var(--font-serif); font-size: 16.5px; line-height: 1.55; color: var(--ink-2); margin: 0; max-width: 65ch; }
+.lg-prose { display: grid; gap: 14px; }
+.lg-prose p { font-family: var(--font-serif); font-size: 16.5px; line-height: 1.55; margin: 0; max-width: 65ch; }
+.lg-quote { font-family: var(--font-serif); font-style: italic; font-size: 16.5px; line-height: 1.55; margin: 0; }
+.lg-h2 { font-family: var(--font-serif); font-weight: 600; font-size: 22px; line-height: 1.25; margin: 0 0 6px; text-wrap: balance; }
+.lg-sub { color: var(--ink-3); margin: 0 0 16px; font-size: 13px; }
+
+/* Stat tiles */
+.lg-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-3); }
+.lg-stat { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-card); padding: 14px var(--space-4); display: grid; gap: 4px; align-content: start; }
+.lg-stat-label { font-size: 12.5px; font-weight: 600; color: var(--ink-3); }
+.lg-stat-value { font-size: 28px; font-weight: 600; line-height: 1.15; letter-spacing: -0.01em; color: var(--ink); }
+.lg-stat-delta { font-family: var(--font-mono); font-size: 12px; color: var(--ink-3); }
+
+/* Chart card */
+.lg-figure { margin: 0; }
+.lg-chart { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-card); padding: var(--space-4) var(--space-4) var(--space-3); position: relative; }
+.lg-legend { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0 0 8px; padding: 0; list-style: none; font-family: var(--font-mono); font-size: 12px; color: var(--ink-2); }
+.lg-legend li { display: flex; align-items: center; gap: 8px; }
+.lg-key { width: 16px; height: 2px; border-radius: 1px; display: inline-block; flex-shrink: 0; }
+.lg-key--bar { width: 10px; height: 10px; border-radius: 2px; }
+.lg-plot { position: relative; }
+.lg-plot svg { display: block; width: 100%; height: auto; overflow: visible; }
+.lg-grid { stroke: var(--line-soft); stroke-width: 1; }
+.lg-tick { font-family: var(--font-mono); font-size: 11px; fill: var(--ink-3); }
+.lg-endlabel { font-family: var(--font-mono); font-size: 12px; fill: var(--ink-2); }
+.lg-barlabel { font-family: var(--font-sans); font-size: 12.5px; fill: var(--ink-2); }
+.lg-tip { position: absolute; top: 0; left: 0; pointer-events: none; background: var(--card); border: 1px solid var(--line-strong); border-radius: var(--radius-control); padding: 8px 10px; min-width: 150px; display: grid; gap: 4px; }
+.lg-tip-date { font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); }
+.lg-tip-row { display: grid; grid-template-columns: 14px auto 1fr; align-items: center; gap: 8px; }
+.lg-tip-row b { font-weight: 600; font-size: 13px; color: var(--ink); font-variant-numeric: tabular-nums; }
+.lg-tip-row span:last-child { font-family: var(--font-mono); font-size: 12px; color: var(--ink-3); }
+.lg-caption { color: var(--ink-3); font-size: 12.5px; margin-top: 10px; }
+.lg-tableview { margin-top: 10px; }
+.lg-tableview summary { cursor: pointer; color: var(--accent); font-size: 13px; width: fit-content; }
+.lg-tableview .lg-table-wrap { margin-top: 10px; }
+
+/* Status glyphs: shape carries the meaning with the label, never colour alone */
+.lg-glyph { display: inline-block; flex-shrink: 0; width: 12px; height: 12px; }
+.lg-glyph--note { border-radius: 50%; width: 11px; height: 11px; background: var(--accent); }
+.lg-glyph--good { background: var(--good); clip-path: polygon(0 55%, 14% 41%, 38% 64%, 86% 12%, 100% 26%, 38% 92%); }
+.lg-glyph--warn { width: 13px; background: var(--warn); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+.lg-glyph--critical { background: var(--critical); clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%); }
+
+/* Callouts */
+.lg-callouts { display: grid; gap: var(--space-3); }
+.lg-callout { border: 1px solid; border-radius: var(--radius-control); padding: 12px 14px; display: grid; grid-template-columns: 14px minmax(0, 1fr); gap: 4px 10px; }
+.lg-callout .lg-glyph { margin-top: 4px; }
+.lg-callout h3 { margin: 0; font-size: 14px; font-weight: 600; line-height: 1.4; }
+.lg-callout p { margin: 0; grid-column: 2; font-size: 14px; line-height: 1.55; color: var(--ink-2); }
+.lg-callout--note { background: var(--accent-tint); border-color: var(--accent); }
+.lg-callout--note h3 { color: var(--accent-text); }
+.lg-callout--good { background: var(--good-tint); border-color: var(--good); }
+.lg-callout--good h3 { color: var(--good-text); }
+.lg-callout--warn { background: var(--warn-tint); border-color: var(--warn); }
+.lg-callout--warn h3 { color: var(--warn-text); }
+.lg-callout--critical { background: var(--critical-tint); border-color: var(--critical); }
+.lg-callout--critical h3 { color: var(--critical-text); }
+
+/* Tables */
+.lg-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-card); background: var(--card); }
+.lg-table { border-collapse: collapse; width: 100%; font-size: 13px; }
+.lg-table th { text-align: left; font-size: 11px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-3); padding: 10px 14px; border-bottom: 1px solid var(--line-strong); white-space: nowrap; }
+.lg-table td { padding: 10px 14px; border-bottom: 1px solid var(--line-soft); vertical-align: top; color: var(--ink); }
+.lg-table tr:last-child td { border-bottom: 0; }
+.lg-table .lg-num { text-align: right; font-variant-numeric: tabular-nums; }
+.lg-table td.lg-mono { font-size: 12px; color: var(--ink-2); white-space: nowrap; }
+.lg-muted { color: var(--ink-3); }
+.lg-status { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; font-weight: 600; }
+.lg-status--note { color: var(--accent); }
+.lg-status--good { color: var(--good); }
+.lg-status--warn { color: var(--warn); }
+.lg-status--critical { color: var(--critical); }
+.lg-status small { font-weight: 400; color: var(--ink-3); font-family: var(--font-mono); font-size: 12px; }
+
+/* Record block */
+.lg-record { background: var(--card); border: 1px solid var(--line-strong); border-radius: var(--radius-record); font-family: var(--font-mono); font-size: 13px; line-height: 1.65; padding: 10px 14px; white-space: pre-line; margin: 0; color: var(--ink); }
+.lg-record-head { display: flex; justify-content: space-between; gap: 12px; font-family: var(--font-sans); font-size: 12.5px; font-weight: 600; color: var(--ink-2); border-bottom: 1px solid var(--line-soft); padding-bottom: 6px; margin-bottom: 6px; white-space: normal; }
+.lg-record-head span + span { font-family: var(--font-mono); font-weight: 400; font-size: 12px; color: var(--ink-3); }
+
+/* Method footer */
+.lg-method { border-top: 1px solid var(--line); padding-top: 20px; display: grid; gap: 10px; color: var(--ink-2); font-size: 13px; }
+.lg-method p { margin: 0; max-width: 65ch; }
+.lg-method .lg-meta { font-family: var(--font-mono); font-size: 12px; color: var(--ink-3); }
+
+@media (max-width: 900px) {
+  .lg-page { grid-template-columns: minmax(0, 1fr); gap: var(--space-8); padding: var(--space-6) var(--space-4) 48px; }
+  .lg-rail { position: static; order: 2; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); border-top: 1px solid var(--line); padding-top: var(--space-6); }
+  .lg-header, .lg-notice { padding-left: var(--space-4); padding-right: var(--space-4); }
+}
+@media (max-width: 560px) {
+  .lg-header-sub { display: none; }
+}

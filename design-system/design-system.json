@@ -1,0 +1,24 @@
+{
+  "v": 3,
+  "layout": "files",
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-09-29T09:16:12Z"
+  },
+  "title": "Ledger",
+  "namespace": "Ledger",
+  "libraries": [],
+  "sections": {},
+  "groups": [],
+  "assetGroups": {},
+  "blobs": {},
+  "docs": {
+    "sections": []
+  },
+  "lastChange": {
+    "by": "Excers",
+    "at": "2026-09-29T09:16:12Z",
+    "via": "Claude (Cowork)",
+    "note": "New brand-neutral report system: warm-paper look with light and dark themes, five chart series and four status tones"
+  }
+}

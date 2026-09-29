@@ -1,0 +1,32 @@
+<!-- @dsCard group="Figures" height=380 width=820 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Chart card</title>
+<style>body{margin:0;background:var(--paper)} .ds-wrap{padding:16px 24px}</style></head>
+<body>
+<div class="lg-root ds-wrap">
+<figure class="lg-figure">
+  <div class="lg-chart">
+    <ul class="lg-legend">
+      <li><span class="lg-key" style="background:var(--chart-1)"></span>api</li>
+      <li><span class="lg-key" style="background:var(--chart-2)"></span>web</li>
+      <li><span class="lg-key" style="background:var(--chart-3)"></span>worker</li>
+    </ul>
+    <div class="lg-plot">
+      <svg viewBox="0 0 720 240" role="img" aria-label="Weekly deploys by service: worker rose to 75, api to 72, web to 66.">
+        <line class="lg-grid" x1="44" x2="620" y1="12" y2="12"/><line class="lg-grid" x1="44" x2="620" y1="77" y2="77"/><line class="lg-grid" x1="44" x2="620" y1="142" y2="142"/><line class="lg-grid" x1="44" x2="620" y1="207" y2="207"/>
+        <text class="lg-tick" x="36" y="16" text-anchor="end">80</text><text class="lg-tick" x="36" y="81" text-anchor="end">70</text><text class="lg-tick" x="36" y="146" text-anchor="end">60</text><text class="lg-tick" x="36" y="211" text-anchor="end">50</text>
+        <text class="lg-tick" x="48" y="232" text-anchor="middle">17 Aug</text><text class="lg-tick" x="162" y="232" text-anchor="middle">24 Aug</text><text class="lg-tick" x="276" y="232" text-anchor="middle">31 Aug</text><text class="lg-tick" x="390" y="232" text-anchor="middle">7 Sep</text><text class="lg-tick" x="504" y="232" text-anchor="middle">14 Sep</text><text class="lg-tick" x="612" y="232" text-anchor="middle">21 Sep</text>
+        <path d="M48 155 L162 135.5 L276 142 L390 122.5 L504 109.5 L612 103" fill="none" stroke="var(--chart-2)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M48 116 L162 103 L276 83.5 L390 90 L504 77 L612 64" fill="none" stroke="var(--chart-1)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M48 77 L162 70.5 L276 57.5 L390 64 L504 51 L612 44.5" fill="none" stroke="var(--chart-3)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="612" cy="103" r="4" fill="var(--chart-2)" stroke="var(--card)" stroke-width="2"/><circle cx="612" cy="64" r="4" fill="var(--chart-1)" stroke="var(--card)" stroke-width="2"/><circle cx="612" cy="44.5" r="4" fill="var(--chart-3)" stroke="var(--card)" stroke-width="2"/>
+        <text class="lg-endlabel" x="622" y="107">web 66</text><text class="lg-endlabel" x="622" y="68">api 72</text><text class="lg-endlabel" x="622" y="48.5">worker 75</text>
+      </svg>
+    </div>
+  </div>
+  <figcaption class="lg-caption">Weeks start on Monday. Hover or use the arrow keys on the chart for weekly values.</figcaption>
+</figure>
+</div>
+</body>
+</html>
